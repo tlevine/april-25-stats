@@ -1,0 +1,6 @@
+[submodule "wsync"]
+	path = wsync
+	url = git@github.com:tlevine/wsync.git
+[submodule "april-25-stats-downloads"]
+	path = april-25-stats-downloads
+	url = git@github.com:tlevine/april-25-stats-downloads.git

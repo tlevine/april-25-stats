@@ -8,3 +8,6 @@ Two statistics talks are competing in New York on April 25, 2013.
     ([New York Open Statistical Programming Meetup](http://www.meetup.com/nyhackr/)
 
 I'm downloading the checkins to see who signs up for which one or both.
+
+    # Write crontab
+    echo "*/30 * * * * cd '$PWD' && ./download.sh"
