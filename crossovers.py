@@ -22,5 +22,5 @@ print 'Attending nyhackr: %d people' % len(r)
 print '\n'.join(r)
 print ''
 
-print 'Attending both: %d people' % len(i)
+print 'Attending both, at the same time: %d people' % len(i)
 print '\n'.join(i)
