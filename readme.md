@@ -7,7 +7,9 @@ Two statistics talks are competing in New York on April 25, 2013.
 * [Bigvis: visualising 100,000,000 observations in R with Hadley Wickham](http://www.meetup.com/nyhackr/events/112271042/)
     ([New York Open Statistical Programming Meetup](http://www.meetup.com/nyhackr/)
 
-I'm downloading the checkins to see who signs up for which one or both.
+I'm downloading the RSVPs to see who signs up for which one or both.
 
     # Write crontab
     echo "*/30 * * * * cd '$PWD' && ./download.sh"
+
+Each time the file changes, a new datestamped file is saved.
