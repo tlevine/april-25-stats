@@ -14,13 +14,29 @@ dk = members(os.path.join(DIR, 'datakind.json'))
 r  = members(os.path.join(DIR, 'nyhackr.json'))
 i = dk.intersection(r)
 
-print 'Attending DataKind: %d people' % len(dk)
+print 'Currently attending DataKind: %d people' % len(dk)
 print '\n'.join(dk)
 print ''
 
-print 'Attending nyhackr: %d people' % len(r)
+print 'Currently attending nyhackr: %d people' % len(r)
 print '\n'.join(r)
 print ''
 
-print 'Attending both, at the same time: %d people' % len(i)
+print 'Currently attending both, at the same time: %d people' % len(i)
 print '\n'.join(i)
+print ''
+
+import re
+
+dk_alltime = set()
+r_alltime  = set()
+for filename in os.listdir(DIR):
+    path = os.path.join(DIR, filename)
+    if re.match(r'^nyhackr-.+json$', filename):
+        r_alltime = r_alltime.union(members(path))
+    elif re.match(r'^datakind-.+json$', filename):
+        dk_alltime = dk_alltime.union(members(path))
+i_alltime = dk_alltime.intersection(r_alltime)
+
+print 'These people were once listed in each event, not necessarily at the same time (%d people).' % len(i_alltime)
+print '\n'.join(i_alltime)
